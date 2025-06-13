@@ -17,12 +17,12 @@ const Notice = () => {
             try {
                 setLoading(true);
 
-                const userResponse = await axios.get("http://localhost:3000/check-user", { params: { username: name } });
+                const userResponse = await axios.get(`${import.meta.env.VITE_API_URL}/check-user`, { params: { username: name } });
 
                 const userStandard = userResponse.data.detail.standard;
                 setStandard(userStandard);
 
-                const noticeResponse = await axios.get("http://localhost:3000/get-notice", { params: { standard: userStandard } });
+                const noticeResponse = await axios.get(`${import.meta.env.VITE_API_URL}/get-notice`, { params: { standard: userStandard } });
 
                 setNotice(noticeResponse.data);
             } catch (error) {

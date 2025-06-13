@@ -8,7 +8,7 @@ const AddNotice = () => {
   const [description, setDescription] = useState("");
 
   const submitNotice = async () => {
-    const response = await axios.post("http://localhost:3000/add-notice", { standard: standard, title: title, description: description })
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/add-notice`, { standard: standard, title: title, description: description })
     setTitle("")
     setDescription("")
     alert("notice added sussecfully")

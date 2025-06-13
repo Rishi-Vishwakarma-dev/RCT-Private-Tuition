@@ -18,7 +18,7 @@ const Attendance = () => {
     if (!standard) return;
 
     axios
-      .get("http://localhost:3000/get-students", {
+      .get(`${import.meta.env.VITE_API_URL}/get-students`, {
         params: { standard: standard },
       })
       .then((response) => {
@@ -48,7 +48,7 @@ const Attendance = () => {
 
     try {
       // First: Check if attendance already exists for selected date & standard
-      const response = await axios.get("http://localhost:3000/get-attendance-one", {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/get-attendance-one`, {
         params: { attendanceDate, standard }
       });
 
@@ -60,7 +60,7 @@ const Attendance = () => {
       }
 
       // Second: If no match found, submit the attendance
-      const submitResponse = await axios.post("http://localhost:3000/submit-attendance", {
+      const submitResponse = await axios.post(`${import.meta.env.VITE_API_URL}/submit-attendance`, {
         date: attendanceDate,
         standard: standard,
         present: present,
@@ -79,7 +79,7 @@ const Attendance = () => {
     if (!standard) return;
 
     axios
-      .get("http://localhost:3000/get-attendance", {
+      .get(`${import.meta.env.VITE_API_URL}/get-attendance`, {
         params: { standard: standard },
       })
       .then((response) => {

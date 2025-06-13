@@ -18,7 +18,7 @@ const AddQuiz = () => {
 
   useEffect(() => {
     const getUser = async () => {
-      const response = await axios.get("http://localhost:3000/check-user", { params: { username: name } })
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/check-user`, { params: { username: name } })
 
       const username = response.data.username;
       const standard = response.data.detail.standard;
@@ -36,7 +36,7 @@ const AddQuiz = () => {
 
   const fetchQuiz = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/get-quiz/${standard}`);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/get-quiz/${standard}`);
       setQuizList(response.data.questions || []);
     } catch (error) {
       setQuizList([]); // Reset if no quiz found
@@ -67,7 +67,7 @@ const AddQuiz = () => {
     };
 
     try {
-      await axios.post("http://localhost:3000/add-quiz", newQuiz);
+      await axios.post(`${import.meta.env.VITE_API_URL}/add-quiz`, newQuiz);
       alert("Quiz updated successfully!");
       setQuestion("");
       setOptions(["", "", "", ""]);

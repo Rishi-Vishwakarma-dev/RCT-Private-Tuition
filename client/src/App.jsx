@@ -8,7 +8,7 @@ function App() {
   const [academy, setAcademy] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/academy-detail")
+    axios.get(`${import.meta.env.VITE_API_URL}/academy-detail`)
       .then(response => setAcademy(response.data))
       .catch(error => console.error("Error fetching academy data:", error));
   }, []);

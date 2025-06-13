@@ -21,7 +21,7 @@ const Profile = () => {
 
     const fetchUser = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/show-user", { params: { username: username } });
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/show-user`, { params: { username: username } });
         setTeacherDetail(response.data)
       }
       catch {
@@ -34,7 +34,7 @@ const Profile = () => {
   useEffect(() => {
     const loadCourse = async () => {
       try {
-        const courseResponse = await axios.get("http://localhost:3000/get-course", { params: { standard: teacherDetail.classes[0] } });
+        const courseResponse = await axios.get(`${import.meta.env.VITE_API_URL}/get-course`, { params: { standard: teacherDetail.classes[0] } });
         setCourse(courseResponse.data);
       }
       catch {

@@ -16,7 +16,7 @@ const Report = () => {
 
   useEffect(() => {
     const getUser = async () => {
-      const response = await axios.get("http://localhost:3000/check-user", { params: { username: name } })
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/check-user`, { params: { username: name } })
 
       const username = response.data.username;
       const standard = response.data.detail.standard;
@@ -28,7 +28,7 @@ const Report = () => {
 
   const submitReport = async () => {
     if (username && standard && type && subject && description) {
-      const response = await axios.post("http://localhost:3000/submit-report", { username: username, standard: standard, type: type, subject: subject, description: description })
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/submit-report`, { username: username, standard: standard, type: type, subject: subject, description: description })
       setType('')
       setSubject('')
       setDescription('')

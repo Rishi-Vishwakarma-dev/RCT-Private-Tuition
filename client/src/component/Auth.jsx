@@ -19,7 +19,7 @@ const LoginPage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.get("http://localhost:3000/check-user", { params: { username: username } })
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/check-user`, { params: { username: username } })
 
       const fetchedPassword = response.data.password;
       setFetchedPassword(fetchedPassword);
@@ -35,7 +35,7 @@ const LoginPage = () => {
       alert("Login Failed, User doesn't exitst");
     }
 
-    // axios.post("http://localhost:3000/add-user", {username: email, password: password})
+    // axios.post(`${import.meta.env.VITE_API_URL}/add-user`, {username: email, password: password})
     // .then(result => console.llog(result))
     // .catch(err => console.log(err))
     // navigate("/dashboard");
@@ -45,7 +45,7 @@ const LoginPage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.get("http://localhost:3000/check-user", { params: { username: teacherUsername } })
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/check-user`, { params: { username: teacherUsername } })
 
       const fetchedPassword = response.data.password;
       setFetchedPassword(fetchedPassword);
@@ -61,7 +61,7 @@ const LoginPage = () => {
       alert("Login Failed, User doesn't exitst");
     }
 
-    // axios.post("http://localhost:3000/add-user", {username: email, password: password})
+    // axios.post(`${import.meta.env.VITE_API_URL}/add-user`, {username: email, password: password})
     // .then(result => console.llog(result))
     // .catch(err => console.log(err))
     // navigate("/dashboard");

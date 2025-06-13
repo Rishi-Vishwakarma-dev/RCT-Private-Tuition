@@ -17,7 +17,7 @@ const Payment = () => {
     const fetchUser = async () => {
 
       try {
-        const response = await axios.get("http://localhost:3000/show-user", { params: { username: username } });
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/show-user`, { params: { username: username } });
 
         const studentDetail = response.data
         setStudentDetail(studentDetail)
@@ -48,7 +48,7 @@ const Payment = () => {
     // }
 
     try {
-      const { data } = await axios.post("http://localhost:3000/razorpay", { amount: 500 });
+      const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/razorpay`, { amount: 500 });
 
       const options = {
         key: "qlliEl4EnLB1s3pJrSSN8LH4", // Replace with your actual API Key

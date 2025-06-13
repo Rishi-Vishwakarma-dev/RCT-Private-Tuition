@@ -14,12 +14,12 @@ const Course = () => {
     const loadCourse = async () => {
       try {
 
-        const userResponse = await axios.get("http://localhost:3000/check-user", { params: { username: name } });
+        const userResponse = await axios.get(`${import.meta.env.VITE_API_URL}/check-user`, { params: { username: name } });
 
         const userStandard = userResponse.data.detail.standard;
         setStandard(userStandard);
 
-        const courseResponse = await axios.get("http://localhost:3000/get-course", { params: { standard: userStandard } });
+        const courseResponse = await axios.get(`${import.meta.env.VITE_API_URL}/get-course`, { params: { standard: userStandard } });
 
         setCourse(courseResponse.data.courses);
       } catch (error) {

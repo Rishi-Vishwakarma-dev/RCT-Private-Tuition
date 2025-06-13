@@ -15,11 +15,11 @@ const Quiz = () => {
 	useEffect(() => {
 		const loadQuiz = async () => {
 			try {
-				const userResponse = await axios.get("http://localhost:3000/check-user", { params: { username: name } });
+				const userResponse = await axios.get(`${import.meta.env.VITE_API_URL}/check-user`, { params: { username: name } });
 				const userStandard = userResponse.data.detail.standard;
 				setStandard(userStandard);
 				
-				axios.get("http://localhost:3000/api/quiz")
+				axios.get(`${import.meta.env.VITE_API_URL}/api/quiz`)
 				.then(response => {
 					const filteredData = response.data.find(quiz => quiz.standard === userStandard);
 					setQuizData(filteredData ? filteredData.questions : []);
