@@ -1,0 +1,126 @@
+.payment-mega-container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.payment-header-panel {
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.payment-label {
+    font-size: 32px;
+}
+
+.payment-fee-panel-box {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.payment-fee-panel {
+    width: 30%;
+    max-width: 300px;
+    height: 100px;
+    padding: 10px;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.payment-color-rod {
+    width: 5px;
+    height: 100%;
+    margin-right: 10px;
+    background-color: red;
+    border-radius: 20px;
+}
+
+.payment-fee-box {
+    width: calc(100% - 20px);
+    height: 100%;
+}
+
+.payment-fee-text {
+    font-size: 22px;
+}
+
+.payment-fee-amount {
+    font-size: 35px;
+}
+
+.payment-option-box-container {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    align-items: center;
+}
+
+.payment-option-box {
+    width: 50%;
+    max-width: 400px;
+    height: 250px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.payment-option-image {
+    width: 100%;
+    height: 60%;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.payment-now-button {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: #8A5CF6;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-now-text {
+    color: white;
+    font-size: 18px;
+}
+
+.payment-partner-image-box {
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-partner-image {
+    width: 100%;
+    max-width: 800px;
+}

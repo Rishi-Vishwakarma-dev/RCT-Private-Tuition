@@ -1,0 +1,56 @@
+.help-rct-classes-container-long-unique-name {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2f3;
+    padding: 50px 20px;
+  }
+  
+  .help-rct-classes-content-long-unique-name {
+    max-width: 900px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .help-rct-classes-title-long-unique-name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  .help-rct-classes-text-long-unique-name {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .help-rct-classes-text-long-unique-name strong {
+    color: #3498db;
+  }
+  
+  .help-rct-classes-list-long-unique-name {
+    text-align: left;
+    display: inline-block;
+    margin-top: 10px;
+    padding-left: 20px;
+    font-size: 18px;
+  }
+  
+  .help-rct-classes-list-long-unique-name li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+  
+  .help-rct-classes-list-long-unique-name li::before {
+    content: "✔ ";
+    color: #2ecc71;
+    font-weight: bold;
+  }
+  

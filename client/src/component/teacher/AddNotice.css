@@ -1,0 +1,114 @@
+.teacher-add-notice-mega-container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    /* gap: 20px; */
+    box-sizing: border-box;
+}
+
+.add-notice-header-panel {
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.teacher-add-notice-mega-container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    /* gap: 20px; */
+    box-sizing: border-box;
+}
+
+.add-notice-label {
+    font-size: 32px;
+}
+
+/* Modern Select Dropdown */
+.notice-select-list-box {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    appearance: none;
+    /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="%23007bff" d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 18px;
+}
+
+/* Hover & Focus Effects */
+.notice-select-list-box:hover {
+    border-color: #0056b3;
+    background-color: #e9f2ff;
+}
+
+.notice-select-list-box:focus {
+    border-color: #0056b3;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Style Options */
+.notice-select-list {
+    font-size: 16px;
+    background: #ffffff;
+    color: #333;
+    padding: 10px;
+}
+
+.notice-title-input {
+    width: 95%;
+    height: 35px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.notice-description-input {
+    width: 95%;
+    height: 200px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.notice-submit-button {
+    width: 50%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: #8A5CF6;
+    border-radius: 8px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
