@@ -20,7 +20,7 @@ app.use(cors({
 }));
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/RCT-Classes');
+mongoose.connect('mongodb+srv://rishivishwa4877:rishiMongodb@cluster0.k16x7.mongodb.net/RCT-Classes?retryWrites=true&w=majority&appName=Cluster0');
 
 app.get('/check-user', (req, res) => {
     const username = req.query.username;
