@@ -8,7 +8,7 @@ function App() {
   const [academy, setAcademy] = useState(null);
 
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_API_URL}/academy-detail`)
+    axios.get(`https://rct-private-tuition-server.vercel.app/academy-detail`)
       .then(response => setAcademy(response.data))
       .catch(error => console.error("Error fetching academy data:", error));
   }, []);
