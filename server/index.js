@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const Razorpay = require("Razorpay");
+const serverless = require('serverless-http');
 const UserModel = require("./Models/User");
 const QuizModel = require("./Models/Quizzes");
 const NoticeModel = require("./Models/Notice");
@@ -288,7 +289,5 @@ app.get("/academy-detail", async (req, res) => {
     }
 });
 
-
-app.listen(3000, () => {
-    console.log("Server is Started....");
-});
+module.exports = app;
+module.exports.handler = serverless(app);
