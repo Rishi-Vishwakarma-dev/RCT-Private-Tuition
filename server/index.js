@@ -16,9 +16,10 @@ app.use(cors());
 app.use(express.json());
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://rct-private-tuition.vercel.app/']
+  origin: "https://rct-private-tuition.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
-
 
 mongoose.connect('mongodb+srv://rishivishwa4877:rishiMongodb@cluster0.k16x7.mongodb.net/RCT-Classes?retryWrites=true&w=majority&appName=Cluster0');
 
