@@ -12,8 +12,6 @@ const AcademyDetailModel = require("./Models/AcademyDetail");
 const AttendanceModel = require("./Models/Attendance");
 
 const app = express();
-
-app.use(cors());
 app.use(express.json());
 
 app.use(cors({
@@ -289,5 +287,4 @@ app.get("/academy-detail", async (req, res) => {
     }
 });
 
-module.exports = app;
-module.exports.handler = serverless(app);
+module.exports = serverless(app);
