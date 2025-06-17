@@ -145,27 +145,27 @@ app.post("/submit-report", async (req, res) => {
 
 // ***************** payment *****************
 
-const razorpay = new Razorpay({
-    key_id: "rzp_test_LeMgfSZnEPxGUF", // Get from Razorpay Dashboard
-    key_secret: "qlliEl4EnLB1s3pJrSSN8LH4",
-});
+// const razorpay = new Razorpay({
+//     key_id: "rzp_test_LeMgfSZnEPxGUF", // Get from Razorpay Dashboard
+//     key_secret: "qlliEl4EnLB1s3pJrSSN8LH4",
+// });
 
-app.post("/razorpay", async (req, res) => {
-    try {
-        const { amount } = req.body;
+// app.post("/razorpay", async (req, res) => {
+//     try {
+//         const { amount } = req.body;
 
-        const options = {
-            amount: amount * 100, // Convert ₹ to paise
-            currency: "INR",
-            receipt: "receipt_order_12345",
-        };
+//         const options = {
+//             amount: amount * 100, // Convert ₹ to paise
+//             currency: "INR",
+//             receipt: "receipt_order_12345",
+//         };
 
-        const order = await razorpay.orders.create(options);
-        res.json(order);
-    } catch (error) {
-        res.status(500).send("Error creating Razorpay order");
-    }
-});
+//         const order = await razorpay.orders.create(options);
+//         res.json(order);
+//     } catch (error) {
+//         res.status(500).send("Error creating Razorpay order");
+//     }
+// });
 
 // ***************** add-quiz *****************
 
