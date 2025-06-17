@@ -22,7 +22,7 @@ app.use(cors(
 app.use(express.json())
 
 // mongoose.connect('mongodb://127.0.0.1:27017/Todo')
-mongoose.connect('mongodb+srv://rishivishwa4877:rishiMongodb@cluster0.k16x7.mongodb.net/Todo?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://rishivishwa4877:rishiMongodb@cluster0.k16x7.mongodb.net/RCT-Classes?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
