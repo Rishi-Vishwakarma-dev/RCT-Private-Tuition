@@ -12,15 +12,26 @@ const AcademyDetailModel = require("./Models/AcademyDetail");
 const AttendanceModel = require("./Models/Attendance");
 
 const app = express();
-app.use(express.json());
+app.use(cors(
+    {
+        origin: "*",
+        methods: ["POST", "GET", "PUT", "DELETE"],
+        credentials: true,
+    }
+))
+app.use(express.json())
 
-app.use(cors({
-  origin: "*",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
+// mongoose.connect('mongodb://127.0.0.1:27017/Todo')
+mongoose.connect('mongodb+srv://rishivishwa4877:rishiMongodb@cluster0.k16x7.mongodb.net/Todo?retryWrites=true&w=majority&appName=Cluster0', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => console.log("Connected to MongoDB"))
+.catch(err => console.error("Failed to connect to MongoDB", err));
 
-mongoose.connect('mongodb+srv://rishivishwa4877:rishiMongodb@cluster0.k16x7.mongodb.net/RCT-Classes?retryWrites=true&w=majority&appName=Cluster0');
+app.get('/', (req, res) => {
+        res.json("Hello Universe!")
+})
 
 app.get('/check-user', (req, res) => {
     const username = req.query.username;
