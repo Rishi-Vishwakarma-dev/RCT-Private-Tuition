@@ -74,8 +74,20 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div style={{"color":"white","backgroundColor":"#0609a4"}} className="footer-razorpay-policy-box">
+        <div className="footer-razorpay-policy-title">
+          Razorpay Policies
+        </div>
+        <div style={{"color":"white","marginLeft":"20px"}} className="footer-razorpay-policy-links">
+          <a style={{"color":"white","marginLeft":"20px"}} href="https://merchant.razorpay.com/policy/Q39fi6uVPca6cq/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+          <a style={{"color":"white","marginLeft":"20px"}} href="https://merchant.razorpay.com/policy/Q39fi6uVPca6cq/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          <a style={{"color":"white","marginLeft":"20px"}} href="https://merchant.razorpay.com/policy/Q39fi6uVPca6cq/refund" target="_blank" rel="noopener noreferrer">Refund Policy</a>
+          <a style={{"color":"white","marginLeft":"20px"}} href="https://merchant.razorpay.com/policy/Q39fi6uVPca6cq/shipping" target="_blank" rel="noopener noreferrer">Shipping Policy</a>
+        </div>
+      </div>
     </>
   )
 }
+
 
 export default Footer
